@@ -12,6 +12,12 @@ public class HomePage extends BasePage {
 	@FindBy(xpath="//a[contains(.,'Logout')]")
 	private WebElement logOutBTN;
 	
+	@FindBy(xpath="//a[@id='nulltab']")
+	private WebElement homeTab;
+	
+	@FindBy(xpath="//a[.='Leads']")
+	private WebElement leadsTab;
+	
 	//initialization
 	public HomePage(WebDriver driver)
 	{
@@ -23,5 +29,13 @@ public class HomePage extends BasePage {
 	public void clickOnLogoutBTN()
 	{
 		logOutBTN.click();
+	}
+	public void clickOnHomeTab()
+	{
+		homeTab.click();
+	}
+	public void clickOnLeadsTab()
+	{
+		leadsTab.click();
 	}
 }
